@@ -4,8 +4,6 @@ import { prisma } from '@/libs/prisma';
 export async function GET() {
     const tasks = await prisma.task.findMany();
     // console.log(tasks);
-
-
     return NextResponse.json(tasks)
 }
 
@@ -18,8 +16,9 @@ export async function POST(request) {
         }
     });
 
-    return NextResponse.json({
-        message: 'Creando tareas',
-        data: createTask
-    })
+    // return NextResponse.json({
+    //     message: 'Creando tareas',
+    //     data: createTask
+    // })
+    return NextResponse.json(createTask)
 }
