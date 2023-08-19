@@ -10,7 +10,8 @@ const loadTask = async () => {
   // console.log(tasks)
 }
 
-export const revalidad = 60;
+// export const revalidad = 60;
+export const revalidad = 'force-dynamic';
 
 const Page = async () => {
   const tasks = await loadTask();
